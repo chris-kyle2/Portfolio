@@ -18,12 +18,12 @@ import {
   Particle,
   StyledLink,
 } from "../styles/Showcase.styled";
-import showcaseImage from "../assets/profile3.png"
+import showcaseImage from "../assets/profile.jpeg"
 import BackgroundImage from "../assets/particle.png";
 import { fadeInLeftVariant, fadeInRightVariant } from "../utils/Variants";
 import { TypeAnimation } from "react-type-animation";
 import ScrollMouse from "./ScrollMouse";
-
+import kodekloud from "../assets/icons/kodekloud.png"
 const Showcase = () => {
   return (
     <PaddingContainer
@@ -49,18 +49,20 @@ const Showcase = () => {
           <Heading as="h2" size="h2" top="0.5rem" bottom="1rem">
             <span style={{
               'font-size': '2rem',
-            }}>Hello, I'm </span><BlueText>Priya Jha!</BlueText>
+            }}>Hello, I'm </span><BlueText>Adarsh Pandey!</BlueText>
           </Heading>
           <Heading as="h3" size="h3">
             A{" "}
             <BlueText>
               <TypeAnimation
                 sequence={[
-                  "FullStack developer",
+                  "DevOps Engineer",
                   1000,
-                  "Problem solver",
+                  "Cloud Maestro",
                   1000,
-                  "Tech enthusiast",
+                  "Automation Ace",
+                  1000,
+                  "Tech Enthusiast",
                   1000,
                 ]}
                 speed={50}
@@ -81,7 +83,7 @@ const Showcase = () => {
             thrive on the challenge of translating complex ideas into
             user-friendly and impactful web applications.<br/>
             Let's connect and turn your ideas into reality! */}
-            I'm a Software developer currently working at Spyne with a  Master's in Mathematics & Computing from IIT Dhanbad. 
+            I'm a DevOps Engineer  currently working at Suukyi Infotech Pvt. Ltd. with a  Master's in Mathematics & Computing from IIT Dhanbad. 
             Always curious to learn more when it comes to  new technologies and creative coding. 
           </ParaText>
          
@@ -91,19 +93,19 @@ const Showcase = () => {
             <IconContainer color="white" size="2rem">
               <StyledLink
                 target="blank"
-                href="https://www.linkedin.com/in/priyajha414"
+                href="https://www.linkedin.com/in/adarshpandeyiitism/"
               >
                 <BsLinkedin />
               </StyledLink>
             </IconContainer>
             <IconContainer color="white" size="2rem">
-              <StyledLink target="blank" href="https://github.com/mikasa-404">
+              <StyledLink target="blank" href="https://github.com/chris-kyle2">
                 <BsGithub />
               </StyledLink>
             </IconContainer>
             <IconContainer color="white" size="2rem">
-              <StyledLink target="blank" href="https://leetcode.com/mikasa404/">
-                <SiLeetcode />
+              <StyledLink target="blank" href="https://engineer.kodekloud.com/profile">
+                <img src={kodekloud} alt="leetcode" height={"65"} width={"65"} />
               </StyledLink>
             </IconContainer>
           </FlexContainer>

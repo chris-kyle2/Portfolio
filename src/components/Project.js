@@ -70,8 +70,13 @@ const Project = ({ data }) => {
               Features:{" "}
             </span>
           </BlueText>
+          {
+            data.features
+          }
 
-          {data.features}
+          {/* {data.features.map((feature, index) => (
+            <ParaText key={index}>{feature}</ParaText>
+          ))} */}
         </ParaText>
         <Button href={data.project_url} target="blank">
           Visit website

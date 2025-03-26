@@ -4,120 +4,61 @@ import {
   PaddingContainer,
   Heading,
   IconContainer,
-  ParaText,
   BlueText,
   FadeImage,
 } from "../styles/Global.styled";
 import { skills } from "../utils/Data";
 import {
   SkillButton,
-  SkillsCard,
-  SkillsCardContainer,
   SkillSectionHeading,
 } from "../styles/MySkills.styled";
 import { motion } from "framer-motion";
-import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from "../utils/Variants";
+import { fadeInLeftVariant, fadeInTopVariant } from "../utils/Variants";
 import fadeimage from "../assets/right.png";
-import {
-  FaCss3,
-  FaReact,
-  FaHtml5,
-  FaNode,
-  FaDocker,
-  FaLinux,
-  FaCss3Alt,
-  FaGit,
-  FaGithub,
-  FaProjectDiagram,
-  FaBrain,
-} from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import {
-  SiAmazonaws,
-  SiCplusplus,
-  SiGraphql,
-  SiMongodb,
-  SiPostman,
-  SiPython,
-  SiServerless,
-} from "react-icons/si";
-import {
-  SiChakraui,
-  SiMysql,
-  SiNextdotjs,
-  SiExpress,
-  SiFramer,
-  SiJavascript,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
-import { AiOutlineApi, AiOutlinePartition } from "react-icons/ai";
-const Languages = [
-  {
-    id: 0,
-    tech: "C++",
-    icon: <SiCplusplus />,
-  },
-  {
-    id: 2,
-    tech: "Python",
-    icon: <SiPython />,
-  },
-  {
-    id: 3,
-    tech: "JavaScript",
-    icon: <SiJavascript />,
-  },
-  {
-    id: 4,
-    tech: "TypeScript",
-    icon: <SiTypescript />,
-  },
-];
-
-const frontendSkills = [
-  { id: 0, tech: "React.js", icon: <FaReact /> },
-  { id: 1, tech: "Next.js", icon: <SiNextdotjs /> },
-  { id: 2, tech: "JavaScript (ES6+)", icon: <SiJavascript /> },
-  { id: 3, tech: "TypeScript", icon: <SiTypescript /> },
-  { id: 4, tech: "HTML5", icon: <FaHtml5 /> },
-  { id: 5, tech: "CSS3", icon: <FaCss3Alt /> },
-  { id: 6, tech: "Tailwind CSS", icon: <SiTailwindcss /> },
-  { id: 7, tech: "Chakra UI", icon: <SiChakraui /> },
-  { id: 8, tech: "Framer Motion", icon: <SiFramer /> },
-];
-const backendSkills = [
-  { id: 0, tech: "Node.js", icon: <FaNode /> },
-  { id: 1, tech: "Express.js", icon: <SiExpress /> },
-  { id: 2, tech: "MongoDB", icon: <SiMongodb /> },
-  { id: 3, tech: "PostgreSQL", icon: <BiLogoPostgresql /> },
-  { id: 4, tech: "MySQL", icon: <SiMysql /> },
-  { id: 5, tech: "GraphQL", icon: <SiGraphql /> },
-  { id: 6, tech: "REST APIs", icon: <AiOutlineApi /> },
-  // { id: 7, tech: "WebSockets", icon: <BiWebsocket /> },
-  // { id: 8, tech: "Prisma", icon: <SiPrisma /> },
-  // { id: 9, tech: "JWT Authentication", icon: <RiKey2Fill /> },
-];
-const devOpsSkills = [
-  { id: 0, tech: "Git", icon: <FaGit /> },
-  { id: 1, tech: "GitHub", icon: <FaGithub /> },
-  { id: 2, tech: "Docker", icon: <FaDocker /> },
-  { id: 3, tech: "AWS (S3, EC2)", icon: <SiAmazonaws /> },
-  // { id: 4, tech: "CI/CD (GitHub Actions)", icon: <SiGithubactions /> },
-  // { id: 5, tech: "Firebase", icon: <SiFirebase /> },
-  // { id: 6, tech: "Postman", icon: <SiPostman/> },
-  // { id: 7, tech: "Swagger", icon: <SiSwagger /> },
-  // { id: 8, tech: "Nginx", icon: <SiNginx /> },
-  { id: 9, tech: "Data Structures & Algorithms", icon: <FaProjectDiagram /> },
-  { id: 10, tech: "OOPS", icon: <SiCplusplus /> },
-  { id: 12, tech: "Problem Solving", icon: <FaBrain /> },
-  { id: 13, tech: "System Design", icon: <AiOutlinePartition /> },
-  // { id: 4, tech: "Debugging & Troubleshooting", icon: <MdBugReport /> },
-  // { id: 5, tech: "Agile Methodologies", icon: <SiJira /> },
-];
-
 
 const MySkills = () => {
+  // AWS Services (12 items)
+  const awsServices = skills.filter(skill => 
+    ["AWS", "AWS Lambda", "Amazon EKS", "Amazon S3", "Amazon EC2", 
+     "Amazon RDS", "CloudWatch", "Route 53", "API Gateway",
+     "SNS", "SQS", "VPC", "Elastic Beanstalk", "DynamoDB","RDS","CDN", "WAF", "IAM", "S3", "EBS", "ECS", "EFS", "Beanstalk", "EventBridge", "SES"].includes(skill.tech)
+  );
+
+  // CI/CD (3 items)
+  const cicdSkills = skills.filter(skill => 
+    ["Jenkins", "GitHub Actions"].includes(skill.tech)
+  );
+
+  // Version Control (1 item)
+  const versionControlSkills = skills.filter(skill => 
+    ["Git"].includes(skill.tech)
+  );
+
+  // Infrastructure as Code (2 items)
+  const infrastructureSkills = skills.filter(skill => 
+    ["Ansible", "Terraform"].includes(skill.tech)
+  );
+
+  // Operating Systems (1 item)
+  const osSkills = skills.filter(skill => 
+    ["Linux"].includes(skill.tech)
+  );
+
+  // Containerization & Orchestration (2 items)
+  const containerSkills = skills.filter(skill => 
+    ["Docker", "Kubernetes"].includes(skill.tech)
+  );
+
+  // Monitoring & Observability (3 items)
+  const monitoringSkills = skills.filter(skill => 
+    ["Grafana", "Prometheus", "OpenTelemetry"].includes(skill.tech)
+  );
+
+  // Programming Languages & Frameworks (4 items)
+  const programmingSkills = skills.filter(skill => 
+    ["Python", "C++", "FastAPI"].includes(skill.tech)
+  );
+
   return (
     <PaddingContainer
       id="Skills"
@@ -127,27 +68,24 @@ const MySkills = () => {
       responsiveRight="1rem"
     >
       <FadeImage src={fadeimage} right="0" width="inherit" />
-      <Heading  size="h4"
-       as={motion.h4}
-       variants={fadeInTopVariant}
-       initial="hidden"
-       whileInView="visible"
+      <Heading 
+        size="h4"
+        as={motion.h4}
+        variants={fadeInTopVariant}
+        initial="hidden"
+        whileInView="visible"
       >
         MY SKILLS
       </Heading>
-      <Heading size="h2"
-       as={motion.h2}
-       variants={fadeInTopVariant}
-       initial="hidden"
-       whileInView="visible"
+      <Heading 
+        size="h2"
+        as={motion.h2}
+        variants={fadeInTopVariant}
+        initial="hidden"
+        whileInView="visible"
       >
-
         What <BlueText>I can do</BlueText>
       </Heading>
-      {/* <ParaText style={{ marginTop: "4rem" }}>
-      With experiences spanning frontend and backend development and modern web technologies, I build scalable, efficient, and visually engaging applications. 
-      I bring strong problem-solving skills, a passion for clean code, and a deep understanding of system design, ensuring seamless user experiences and robust performance
-      </ParaText> */}
     
       <FlexContainer
         gap="30px"
@@ -158,33 +96,12 @@ const MySkills = () => {
         variants={fadeInLeftVariant}
         initial="hidden"  
         whileInView="visible"
+        wrap
       >
-         <FlexContainer gap="20px" responsiveFlex>
-          <SkillSectionHeading>Languages</SkillSectionHeading>
-          {Languages.map((skill) => (
-            <SkillButton key={skill.id}>
-              <IconContainer color="blue" size="1.5rem">
-                {skill.icon}
-              </IconContainer>{" "}
-              {skill.tech}
-            </SkillButton>
-          ))}
-        </FlexContainer> 
-       {/*} <FlexContainer gap="20px" responsiveFlex>
-          <SkillSectionHeading>Web technologies</SkillSectionHeading>
-          {webTechnologies.map((skill) => (
-            <SkillButton key={skill.id}>
-              <IconContainer color="blue" size="1.5rem">
-                {skill.icon}
-              </IconContainer>{" "}
-              {skill.tech}
-            </SkillButton>
-          ))}
-        </FlexContainer> */}
-        
-        <FlexContainer gap="20px" responsiveFlex> 
-          <SkillSectionHeading>Frontend</SkillSectionHeading>
-          {frontendSkills.map((skill) => (
+        {/* Operating Systems (1 item) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Operating Systems</SkillSectionHeading>
+          {osSkills.map((skill) => (
             <SkillButton key={skill.id}>
               <IconContainer color="blue" size="1.5rem">
                 {skill.icon}
@@ -193,9 +110,11 @@ const MySkills = () => {
             </SkillButton>
           ))}
         </FlexContainer>
-         <FlexContainer gap="20px" responsiveFlex> 
-          <SkillSectionHeading>Backend</SkillSectionHeading>
-          {backendSkills.map((skill) => (
+
+        {/* Version Control (1 item) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Version Control</SkillSectionHeading>
+          {versionControlSkills.map((skill) => (
             <SkillButton key={skill.id}>
               <IconContainer color="blue" size="1.5rem">
                 {skill.icon}
@@ -203,21 +122,88 @@ const MySkills = () => {
               {skill.tech}
             </SkillButton>
           ))}
-          </FlexContainer>
-          <FlexContainer gap="20px" responsiveFlex> 
-            <SkillSectionHeading>Others</SkillSectionHeading>
-            {devOpsSkills.map((skill) => (
-              <SkillButton key={skill.id}>
-                <IconContainer color="blue" size="1.5rem">
-                  {skill.icon}
-                </IconContainer>{" "}
-                {skill.tech}
-              </SkillButton>
-            ))}
-            </FlexContainer>
+        </FlexContainer>
+
+        {/* Infrastructure as Code (2 items) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>IaC and Configuration Management</SkillSectionHeading>
+          {infrastructureSkills.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+
+        {/* Containerization & Orchestration (2 items) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Containerization & Orchestration</SkillSectionHeading>
+          {containerSkills.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+
+        {/* CI/CD (3 items) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Continuous Integration & Deployment</SkillSectionHeading>
+          {cicdSkills.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+
+        {/* Monitoring & Observability (3 items) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Monitoring & Observability</SkillSectionHeading>
+          {monitoringSkills.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+
+        {/* Programming Languages & Frameworks (4 items) */}
+        <FlexContainer gap="20px" responsiveFlex>
+          <SkillSectionHeading>Programming Languages & Frameworks</SkillSectionHeading>
+          {programmingSkills.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+
+        {/* AWS Services (12+ items) */}
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
+          <SkillSectionHeading>AWS Services</SkillSectionHeading>
+          {awsServices.map((skill) => (
+            <SkillButton key={skill.id}>
+              <IconContainer color="blue" size="1.5rem">
+                {skill.icon}
+              </IconContainer>{" "}
+              {skill.tech}
+            </SkillButton>
+          ))}
+        </FlexContainer>
+        
+
       </FlexContainer>
-      
-     
     </PaddingContainer>
   );
 };

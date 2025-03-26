@@ -50,34 +50,20 @@ const Experience = () => {
           <VerticalTimelineElement
             contentStyle={{ background: "#191919", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #191919" }}
-            date="Aug 2024- Present"
+            date="Oct 2024- Present"
             iconStyle={{ background: "#88AB8E", color: "#fff" }}
           >
             <h3 className="vertical-timeline-element-title">
-              SDE Intern - FullStack
+              DevOps Intern
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Spyne 
+              Suukyi Infotech Pvt. Ltd.
             </h4>
             <p>
-            Working as a Full-stack developer in the 360 team, creating immersive 360-degree views of cars
+            Working as a DevOps Engineer Intern, creating scalable infrastructure and implementing CI/CD pipelines for efficient software delivery.
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#191919", color: "#88AB8E" }}
-            contentArrowStyle={{ borderRight: "7px solid  #191919" }}
-            date="Feb 2024- July 2024"
-            iconStyle={{ background: "#88AB8E", color: "#fff" }}
-          >
-             <h3 className="vertical-timeline-element-title">
-              Frontend Developer Intern
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              The Internet Folks
-            </h4>
-            <p>
-              Worked as a frontend intern, contributing to building scalable no-code solutions, developing user-friendly event registration flows, and enhancing client websites. </p>
-          </VerticalTimelineElement>
+           
           <VerticalTimelineElement
             contentStyle={{ background: "#191919", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  #191919" }}

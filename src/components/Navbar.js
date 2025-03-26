@@ -48,7 +48,7 @@ const Navbar = () => {
             {/* letf-logo */}
             <div onClick={scrollToTop}>
               <Logo>
-                PriyaJha<BlueText>.dev</BlueText>
+                Dev<BlueText>.Ops</BlueText>
               </Logo>
             </div>
             {/* middle-content */}
