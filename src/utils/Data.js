@@ -40,7 +40,7 @@ import EventbridgeIcon from "../assets/icons/aws/eventbridgeIcon";
 
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1vvAV33aUfwPDyseY3XSwAcUpIWDs31Fj/view?usp=sharing";
+  "https://drive.google.com/file/d/1tw0gF8SSwxsxzaog-Xf6aAVhkSmZi_d5/view?usp=sharing";
 export const skills = [
   {
     id: 1,
@@ -249,7 +249,7 @@ export const projects = [
   </div>,
     tech_stack: ["Terraform", "AWS EKS", "AWS S3", "AWS IAM","Helm", "GitHub Actions", "ArgoCD","Docker","Kubernetes","ALB","DynamoDB"],
     project_img: Project3,
-    project_url: "https://ai-podcast-platform.vercel.app",
+    // project_url: "https://ai-podcast-platform.vercel.app",
     github_link: "https://github.com/mikasa-404/ai-podcast-platform",
     reverse: true,
   },
@@ -285,8 +285,8 @@ export const projects = [
     ],
     
     project_img: Project1,
-    project_url: "https://ai-podcast-platform.vercel.app",
-    github_link: "https://github.com/mikasa-404/ai-podcast-platform",
+    // project_url: "https://ai-podcast-platform.vercel.app",
+    github_link: "https://github.com/chris-kyle2/solar-system.git",
     reverse: true,
   }
 
