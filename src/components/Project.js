@@ -78,9 +78,9 @@ const Project = ({ data }) => {
             <ParaText key={index}>{feature}</ParaText>
           ))} */}
         </ParaText>
-        <Button href={data.project_url} target="blank">
+        {!data.removeVisit && <Button href={data.project_url} target="blank">
           Visit website
-        </Button>
+        </Button>}
       </motion.div>
       <ProjectImageContainer
         as={motion.div}

@@ -231,6 +231,7 @@ export const projects = [
     project_url: "https://s6lxblazkdroduvwr5kdndxfmq0qyzvu.lambda-url.us-east-1.on.aws/docs",
     github_link: "https://github.com/chris-kyle2/fastapi.git",
     reverse: false,
+    removeVisit: false,
   },
   {
     id: 4,
@@ -252,6 +253,7 @@ export const projects = [
     // project_url: "https://ai-podcast-platform.vercel.app",
     github_link: "https://github.com/mikasa-404/ai-podcast-platform",
     reverse: true,
+    removeVisit: true,
   },
 
   
@@ -288,6 +290,7 @@ export const projects = [
     // project_url: "https://ai-podcast-platform.vercel.app",
     github_link: "https://github.com/chris-kyle2/solar-system.git",
     reverse: true,
+    removeVisit: true,
   }
 
 ];

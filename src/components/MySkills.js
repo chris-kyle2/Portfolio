@@ -96,10 +96,10 @@ const MySkills = () => {
         variants={fadeInLeftVariant}
         initial="hidden"  
         whileInView="visible"
-        wrap
+        wrap="wrap"
       >
         {/* Operating Systems (1 item) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Operating Systems</SkillSectionHeading>
           {osSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -112,7 +112,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* Version Control (1 item) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Version Control</SkillSectionHeading>
           {versionControlSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -125,7 +125,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* Infrastructure as Code (2 items) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>IaC and Configuration Management</SkillSectionHeading>
           {infrastructureSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -138,7 +138,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* Containerization & Orchestration (2 items) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Containerization & Orchestration</SkillSectionHeading>
           {containerSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -151,7 +151,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* CI/CD (3 items) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Continuous Integration & Deployment</SkillSectionHeading>
           {cicdSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -164,7 +164,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* Monitoring & Observability (3 items) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Monitoring & Observability</SkillSectionHeading>
           {monitoringSkills.map((skill) => (
             <SkillButton key={skill.id}>
@@ -177,7 +177,7 @@ const MySkills = () => {
         </FlexContainer>
 
         {/* Programming Languages & Frameworks (4 items) */}
-        <FlexContainer gap="20px" responsiveFlex>
+        <FlexContainer gap="20px" responsiveFlex wrap="wrap">
           <SkillSectionHeading>Programming Languages & Frameworks</SkillSectionHeading>
           {programmingSkills.map((skill) => (
             <SkillButton key={skill.id}>
