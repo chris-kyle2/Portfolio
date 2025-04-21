@@ -229,7 +229,7 @@ export const projects = [
       </div>,
     tech_stack: ["Python","FastAPI", "AWS RDS", "SNS", "SQS", "Lambda", "EventBridge", "SES"],
     project_img: Project4,
-    project_url: "https://s6lxblazkdroduvwr5kdndxfmq0qyzvu.lambda-url.us-east-1.on.aws/docs",
+    project_url: "https://d1dnaki3okqf9b.cloudfront.net",
     github_link: "https://github.com/chris-kyle2/fastapi.git",
     reverse: false,
     removeVisit: false,
