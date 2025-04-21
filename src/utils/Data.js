@@ -217,9 +217,10 @@ export const projects = [
  
   {
     id: 0,
-    project_name: "EchoPulse: Social Media API with Scalable Notification System",
-    project_desc: "EchoPulse is a scalable social media API with real-time interactions, secure authentication, and multi-channel notifications, powered by AWS.",
+    project_name: "🛠️ Secure, Scalable, and Performant Static Website on AWS With Scalable Notification system and Push Notifications",
+    project_desc: "A scalable notification system with real-time push notifications, scheduled notifications, and customizable preferences, powered by AWS SNS, SQS, and EventBridge.",
     features: <div>
+      <p>🔄 Web Push Notification: In Browser Notification Using pywebpush</p>
       <p>📱 Multi-channel notifications: ⚡ Sends alerts via SMS, email (AWS SES), and Slack.</p>
       <p>🚀 Real-time push notifications: 🔄 Uses AWS SNS and SQS for instant user updates.</p>
       <p>⏰ Scheduled notifications: 🎯 Implements AWS EventBridge for milestone reminders, likes, and promotional messages.</p>
