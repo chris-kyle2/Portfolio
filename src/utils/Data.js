@@ -227,7 +227,7 @@ export const projects = [
       <p>⚙️ Customizable preferences: 🔧 Users can choose their preferred notification channels.</p>
       <p>📨➡️💀 Dead Letter Queue: 📤 Handles undelivered messages with a dead letter queue.</p>
       </div>,
-    tech_stack: ["Python","FastAPI", "AWS RDS", "SNS", "SQS", "Lambda", "EventBridge", "SES"],
+    tech_stack: ["Python","FastAPI", "AWS RDS", "SNS", "SQS", "Lambda", "EventBridge", "SES","CloudFront","CloudWatch","Route53","AWS WAF","S3"],
     project_img: Project4,
     project_url: "https://d1dnaki3okqf9b.cloudfront.net",
     github_link: "https://github.com/chris-kyle2/fastapi.git",
