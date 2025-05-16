@@ -23,7 +23,7 @@ import {
 import { MdAttachEmail } from "react-icons/md";
 import { FaGolang } from "react-icons/fa6";
 import Project1 from "../assets/SolarSystem.gif";
-import Project2 from "../assets/Screenshot from 2024-01-31 12-25-05.png";
+import betterStack from "../assets/betterStack.png"
 import Project3 from "../assets/opentel.gif";
 import Project4 from "../assets/notificationSystem.gif";
 import CdnIcon from "../assets/icons/aws/cdnIcon";
@@ -214,11 +214,45 @@ export const skills = [
   
 
 export const projects = [
+  {
+    id: 0,  
+    project_name: "PulseMonitor: Decentralized Multi-Region Monitoring System",
+    project_desc: "A serverless application that monitors endpoints across multiple AWS regions using Lambda functions, providing real-time health checks and performance metrics.",
+    features: <div>
+      <p>✨ Secure User Authentication: AWS Cognito integration for user management and session handling</p>
+      <p>🚀 Distributed Monitoring: AWS Lambda functions deployed across multiple regions for global endpoint coverage</p>
+      <p>⚡ Real-time Health Checks: Continuous monitoring of endpoints with instant status updates</p>
+      <p>📊 Performance Analytics: Interactive dashboard displaying response times, uptime, and endpoint metrics</p>
+      <p>🗄️ Scalable Data Storage: DynamoDB implementation for efficient user data and endpoint information management</p>
+      <p>🛠️ Infrastructure Automation: Terraform-managed infrastructure with environment-specific configurations</p>
+      <p>🔄 DevOps Pipeline: Automated testing and deployment using GitHub Actions for consistent delivery</p>
+    </div>,
+    tech_stack: [
+        "React.js",
+        "Tailwind CSS",
+        "Bolt (Frontend Framework)",
+        "AWS Lambda",
+        "AWS Cognito",
+        "FastAPI",
+        "Python",
+        "DynamoDB",
+        "Terraform",
+        "GitHub Actions"
+    ],
+    project_img: betterStack,
+    project_url: "https://betterstack.vercel.app",
+    github_link: "https://github.com/chris-kyle2/betterstack.git",
+    reverse: false,
+    removeVisit: false,
+},
+
+
+
  
   {
-    id: 0,
+    id: 1,
     project_name: "🛠️ Secure, Scalable, and Performant Static Website on AWS With Scalable Notification system and Push Notifications",
-    project_desc: "A scalable notification system with real-time push notifications, scheduled notifications, and customizable preferences, powered by AWS SNS, SQS, and EventBridge.",
+    project_desc: "A scalable notification system with real-time push notifications, scheduled notifications, and customizable preferences, powered by Serverless (AWS Lambda) , AWS SNS, SQS,RDS(PostgreSQL),CloudFront, CloudWatch, AWS WAF, S3, Route 53 and EventBridge.",
     features: <div>
       <p>🔄 Web Push Notification: In Browser Notification Using pywebpush</p>
       <p>📱 Multi-channel notifications: ⚡ Sends alerts via SMS, email (AWS SES), and Slack.</p>
@@ -288,7 +322,6 @@ export const projects = [
     ],
     
     project_img: Project1,
-    // project_url: "https://ai-podcast-platform.vercel.app",
     github_link: "https://github.com/chris-kyle2/solar-system.git",
     reverse: true,
     removeVisit: true,
