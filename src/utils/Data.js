@@ -285,8 +285,8 @@ export const projects = [
   </div>,
     tech_stack: ["Terraform", "AWS EKS", "AWS S3", "AWS IAM","Helm", "GitHub Actions", "ArgoCD","Docker","Kubernetes","ALB","DynamoDB"],
     project_img: Project3,
-    // project_url: "https://ai-podcast-platform.vercel.app",
-    github_link: "https://github.com/mikasa-404/ai-podcast-platform",
+   
+    github_link: "https://github.com/chris-kyle2/open-telemetry-demo-project.git",
     reverse: true,
     removeVisit: true,
   },
