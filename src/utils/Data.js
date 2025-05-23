@@ -40,7 +40,7 @@ import EventbridgeIcon from "../assets/icons/aws/eventbridgeIcon";
 
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1tw0gF8SSwxsxzaog-Xf6aAVhkSmZi_d5/view?usp=sharing";
+  "https://drive.google.com/file/d/1OC09ofEdOtjD9hgTPUZ-8b7ZrvA0d6b1/view?usp=sharing";
 export const skills = [
   {
     id: 1,
